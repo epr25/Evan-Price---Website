@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moray Eel</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+  </style> 
+  <meta description ="A website about a 
+  very biased select few species of fish, 
+  with interesting information and facts 
+  about them">
+</head>  
+<body>
+  <!--Common header-->
+  <div id="header"></div>
+  <div class="morayeel">
+  <div class="title">
+    <h1>Moray Eel</h1>
+  <p>Scientific Name: Muraenidae 
+
+</p>
+  </div>
+</div>
+  <!--Page content-->
+ 
+
+
+
+ 
+  <main>
+  
+    <h2>Introduction</h2>
+    <img src="images/morayeelsecondaryimage.jpg">
+    <p>A common sight divers may see in coral reefs is Eels hiding within the rocky terrain of the ocean.</p>
+    <p>One of these sights could be the Moray Eel, which is one of the most well known species of eels.</p>
+    <p>They often have a bad reputation due to their frightening appearance and "aggression", though the latter is usually the case of hand-feeding or unaware divers.</p>
+    <h2>Quick Facts</h2>
+    <li>Moray eels hunt at night and are opportunistic carnivores; feeding off of fish, octopuses, crustaceans, and squid</li>
+    <li>Moray eels contain a protective mucus all over their body - which in some species is toxic, this mucus allows them to swim across the rocks without harm, and acts as a glue when they need to create burrows</li>
+    <li>Also mentioned in the Grouper page; they have a symbiotic relationship with Groupers, where they cooperate with one another to hunt prey - the Eel preventing the potential food from escaping in the rocks, while the Grouper patrols overhead</li>
+    <h2>Sources</h2> 
+    <p>https://zanzibaroneocean.com/2025/03/17/creature-feature-moray-eel/</p>
+<!--Common footer-->
+
+<script src="script.js" defer></script>
+<script>
+    async function loadHTML(id, file, callback) {
+  const el = document.getElementById(id);
+  const resp = await fetch(file);
+  el.innerHTML = await resp.text();
+  if (callback) callback();
+}
+
+loadHTML("header", "header.html", () => {
+    initHamburgerMenu();   // <-- attach listeners HERE
+});
+loadHTML("footer", "footer.html");
+</script>
+        
+</body>
+</html>

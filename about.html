@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About The Site</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+  </style> 
+  <meta description ="A website about a 
+  very biased select few species of fish, 
+  with interesting information and facts 
+  about them">
+</head>  
+<body>
+  <!--Common header-->
+  <div id="header"></div>
+  <div class="hero">
+  <div class="title">
+    <h1>About Page</h1>
+  <p>So whats the deal with this website anyhow?</p>
+  </div>
+</div>
+  <!--Page content-->
+ 
+
+
+
+ 
+  <main>
+  
+    <h1>About The Site</h1>
+    <img src="images\Moray-Eel.webp">
+    <p>This website was created by Evan Price, with the intention of showing information about fish that he finds interesting.</p> 
+    <p>This website was also originally an ordered list focusing on interesting biased fish with links to websites for each of them.</p> 
+<!--Common footer-->
+
+<script src="script.js" defer></script>
+<script>
+    async function loadHTML(id, file, callback) {
+  const el = document.getElementById(id);
+  const resp = await fetch(file);
+  el.innerHTML = await resp.text();
+  if (callback) callback();
+}
+
+loadHTML("header", "header.html", () => {
+    initHamburgerMenu();   // <-- attach listeners HERE
+});
+loadHTML("footer", "footer.html");
+</script>
+        
+</body>
+</html>
